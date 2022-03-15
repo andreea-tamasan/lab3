@@ -14,6 +14,7 @@ void TestPrimeSequence() {
     assert(start == 2);
     assert(a[2] == 5);
     assert(a[3] == 7);
+    delete[] a;
 }
 
 void TestNumbersInInterval() {
@@ -27,4 +28,5 @@ void TestNumbersInInterval() {
     assert(end == 3);
     assert(a[0] == 1);
     assert(a[2] == 4);
+    delete[] a;
 }

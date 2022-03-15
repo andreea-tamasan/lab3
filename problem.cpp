@@ -19,11 +19,11 @@ bool isPrime(int n)
     return true;
 }
 
-int* prime_sequence(int v[], int l,int &start,int &end)
+void prime_sequence(int *v, int l,int &start,int &end)
 {
     int i,nr=0,max=0,poz=0;
     for(i=0;i<l;i++)
-        if(isPrime(v[i]) != 0)
+        if(isPrime(*(v+i)) != 0)
             nr++;
         else
         {
@@ -45,27 +45,27 @@ int* prime_sequence(int v[], int l,int &start,int &end)
     end=max;
 }
 
-bool asc(int poz1, int poz2, int v[])
+bool asc(int poz1, int poz2, int *v)
 {
     int i;
     bool ok = true;
     for(i=poz1;i<poz2;i++)
-        if(v[i] >= v[i+1])
+        if(*(v+i) >= *(v+i+1))
             ok = false;
     return ok;
 }
 
-bool interval_verify(int poz1, int poz2, int v[], int x, int y)
+bool interval_verify(int poz1, int poz2, int *v, int x, int y)
 {
     bool ok = true;
     for(int i= poz1;i< poz2;i++)
-        if(v[i] <x or v[i] >y)
+        if(*(v+i) <x or *(v+i) >y)
             ok = false;
     return ok;
 
 }
 
-void interval_sequence(int v[], int l, int & start, int & end, int x, int y)
+void interval_sequence(int *v, int l, int & start, int & end, int x, int y)
 {
     start = 0;
     end = 0;

@@ -15,9 +15,9 @@ bool isPrime(int n);
 /// \param start - pozitia de inceput a subsirului
 /// \param end - pozitia de final a subsirului
 /// \return -
-int* prime_sequence(int v[], int l,int &start,int &end);
+void prime_sequence(int *v, int l,int &start,int &end);
 
-bool asc(int poz1, int poz2, int a[]);
+bool asc(int poz1, int poz2, int *a);
 void sequence_asc(int a[], int n, int &start, int &end);
 
 /// determina numerele aflate intr-un interval de numere citite de la tastatura
@@ -27,6 +27,6 @@ void sequence_asc(int a[], int n, int &start, int &end);
 /// \param end - pozitia de final a subsecventei
 /// \param x - valoare citita pentru capatul inferior al intervalului
 /// \param y - valoare citita pentru capatul superior al intervalului
-void interval_sequence(int a[], int n, int & start, int & end, int x, int y);
+void interval_sequence(int *a, int n, int & start, int & end, int x, int y);
 
 #endif //LAB3_PROBLEM_H
